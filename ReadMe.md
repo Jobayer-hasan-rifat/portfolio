@@ -5,13 +5,19 @@
 
 <!-- Animated Typing Text - Slower Speed -->
 <h1 align="center">
-  <img src="https://readme-typing-svg.herokuapp.com/?font=JetBrains+Mono&size=35&center=true&vCenter=true&width=700&height=70&duration=6000&pause=2000&lines=Hey!+I'm+MD.+Jobayer+Hasan;Final+Year+CS+Student+at+BRAC+University;Tech+Enthusiast+%26+Future+AI+Developer;Building+the+Future+with+Code!" />
+  <img src="https://readme-typing-svg.herokuapp.com/?font=JetBrains+Mono&size=35&center=true&vCenter=true&width=700&height=70&duration=4000&pause=1000&lines=Hey!+I'm+MD.+Jobayer+Hasan;CS+Student+at+BRAC+University;Tech+Enthusiast;Future+AI+Developer;Building+the+Future+with+Code!" />
 </h1>
 
 <!-- Subtitle with slower animation -->
 <h2 align="center">
   <img src="https://readme-typing-svg.herokuapp.com/?font=Fira+Code&size=22&center=true&vCenter=true&width=800&height=50&duration=5000&pause=2000&color=00D9FF&lines=Passionate+about+AI%2C+Game+Development+%26+Mobile+Apps;Always+Learning%2C+Always+Growing%2C+Always+Coding;Ready+to+Innovate+and+Create+Amazing+Things!" />
 </h2>
+
+</div>
+
+<div align="center">
+
+### 🌐 **[Visit My Portfolio](https://portfolio-jhr5.vercel.app/)** 🌐
 
 </div>
 
@@ -141,7 +147,7 @@
 
 ### 🚀 *"Code. Create. Innovate. Repeat."*
 
-![Profile Views](https://visitcount.itsvg.in/api?id=Jobayer-hasan-rifat&icon=7&color=0)
+[![Portfolio](https://img.shields.io/badge/Portfolio-Live-brightgreen?style=for-the-badge&logo=vercel)](https://portfolio-jhr5.vercel.app/)
 
 **Thanks for visiting! Let's build something amazing together! 🌟**
 
