@@ -1,6 +1,7 @@
 {
   "version": 2,
   "name": "jobayer-portfolio",
+  "_comment": "Static site deployment - no builds needed",
   "headers": [
     {
       "source": "/assets/(.*)",
