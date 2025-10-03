@@ -1,16 +1,16 @@
 <div align="center">
   
-<!-- Add your background image here -->
-<img width="100%" height="300" src="YOUR_BACKGROUND_IMAGE_URL_HERE" alt="Background"/>
+<!-- Hexagon Pattern Background -->
+<img width="100%" height="300" src="https://user-images.githubusercontent.com/74038190/225813708-98b745f2-7d22-48cf-9150-083f1b00d6c9.gif" alt="Coding Background"/>
 
-<!-- Animated Typing Text -->
+<!-- Animated Typing Text - Slower Speed -->
 <h1 align="center">
-  <img src="https://readme-typing-svg.herokuapp.com/?font=Righteous&size=35&center=true&vCenter=true&width=500&height=70&duration=4000&lines=Hey!+I'm+MD.+Jobayer+Hasan;CS+Student+%26+Tech+Enthusiast;Building+the+Future+with+Code!" />
+  <img src="https://readme-typing-svg.herokuapp.com/?font=Righteous&size=35&center=true&vCenter=true&width=700&height=70&duration=6000&pause=2000&lines=Hey!+I'm+MD.+Jobayer+Hasan;Final+Year+CS+Student+at+BRAC+University;Tech+Enthusiast+%26+Future+AI+Developer;Building+the+Future+with+Code!" />
 </h1>
 
-<!-- Glitch Effect Alternative -->
+<!-- Subtitle with slower animation -->
 <h2 align="center">
-  <img src="https://readme-typing-svg.herokuapp.com/?font=Fira+Code&size=25&center=true&vCenter=true&width=600&height=50&duration=3000&pause=1000&color=00D9FF&lines=Final+Year+CS+Student+at+BRAC+University;Passionate+about+AI+%26+Game+Development;Always+Learning%2C+Always+Growing" />
+  <img src="https://readme-typing-svg.herokuapp.com/?font=Fira+Code&size=22&center=true&vCenter=true&width=800&height=50&duration=5000&pause=2000&color=00D9FF&lines=Passionate+about+AI%2C+Game+Development+%26+Mobile+Apps;Always+Learning%2C+Always+Growing%2C+Always+Coding;Ready+to+Innovate+and+Create+Amazing+Things!" />
 </h2>
 
 </div>
@@ -119,14 +119,21 @@
 
 ## 🎯 Current Focus
 
-```javascript
-const jobayer = {
-    currentlyLearning: ["AI/ML", "Game Development", "Mobile App Development"],
-    futureGoals: ["Build AI Systems", "Create Immersive Games", "Develop Innovative Apps"],
-    askMeAbout: ["Web Development", "Problem Solving", "Tech Innovation"],
-    funFact: "I debug with console.log() and I'm proud of it! 🐛"
-};
-```
+<div align="center">
+
+### 🌱 Currently Learning
+**AI/ML** • **Game Development** • **Mobile App Development**
+
+### 🚀 Future Goals  
+**Build AI Systems** • **Create Immersive Games** • **Develop Innovative Apps**
+
+### 💬 Ask Me About
+**Web Development** • **Problem Solving** • **Tech Innovation**
+
+### 🎉 Fun Fact
+*I debug with console.log() and I'm proud of it!* 🐛
+
+</div>
 
 ---
 

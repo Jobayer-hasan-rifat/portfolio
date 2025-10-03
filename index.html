@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MD. Jobayer Hasan | Tech Enthusiast & Developer</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Rajdhani:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <span class="glitch" data-text="JH.DEV">JH.DEV</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="#home" class="nav-link">Home</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#skills" class="nav-link">Skills</a></li>
+                <li><a href="#projects" class="nav-link">Projects</a></li>
+                <li><a href="#achievements" class="nav-link">Achievements</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+                <li><button id="themeToggle" class="theme-toggle" aria-label="Toggle theme">
+                    <i class="fas fa-sun" id="themeIcon"></i>
+                </button></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-container">
+            <div class="hero-content">
+                <h1 class="hero-title">
+                    <span class="glitch-text" data-text="MD. JOBAYER HASAN">MD. JOBAYER HASAN</span>
+                </h1>
+                <h2 class="hero-subtitle">
+                    <span class="typing-text"></span>
+                </h2>
+                <div class="profile-container">
+                    <img src="assets/images/profile1.jpg" alt="Jobayer Hasan" class="profile-img">
+                    <div class="profile-overlay"></div>
+                </div>
+                <p class="hero-description">
+                    Final Year CS Student at BRAC University | Passionate about AI, Game Development & Innovation
+                </p>
+                <div class="hero-buttons">
+                    <a href="#projects" class="btn btn-primary">View Projects</a>
+                    <a href="assets/documents/Jobayer_Hasan_CV.docx" class="btn btn-secondary" download>Download CV</a>
+                    <a href="#contact" class="btn btn-secondary">Get In Touch</a>
+                </div>
+            </div>
+            <div class="scroll-indicator">
+                <div class="scroll-arrow"></div>
+            </div>
+        </div>
+        <div class="hero-bg-animation">
+            <div class="tech-particles" id="techParticles"></div>
+        </div>
+    </section>
+    <section id="about" class="about">
+        <div class="container">
+            <h2 class="section-title glitch" data-text="ABOUT ME">ABOUT ME</h2>
+            <div class="about-content">
+                <div class="about-text matrix-text">
+                    <p class="about-intro matrix-text">
+                        I'm a passionate Computer Science student at BRAC University, driven by curiosity and innovation. My journey in tech spans across web development, AI/ML, and game development.
+                    </p>
+                    <div class="about-details">
+                        <div class="detail-item">
+                            <i class="fas fa-graduation-cap"></i>
+                            <div>
+                                <h4 class="matrix-text">Education</h4>
+                                <p>Final Year CS Student at BRAC University</p>
+                            </div>
+                        </div>
+                        <div class="detail-item">
+                            <i class="fas fa-code"></i>
+                            <div>
+                                <h4 class="matrix-text">Focus Areas</h4>
+                                <p>AI/ML, Game Development, Web Development</p>
+                            </div>
+                        </div>
+                        <div class="detail-item">
+                            <i class="fas fa-rocket"></i>
+                            <div>
+                                <h4 class="matrix-text">Goals</h4>
+                                <p>Building AI Systems & Immersive Gaming Experiences</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-stats">
+                    <div class="stat-item">
+                        <span class="stat-number" data-target="25">0</span>
+                        <span class="stat-label">GitHub Repositories</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number" data-target="2">0</span>
+                        <span class="stat-label">Years Experience</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number" data-target="12">0</span>
+                        <span class="stat-label">Technologies Learned</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+{{ ... }}
+    <!-- Skills Section -->
+    <section id="skills" class="skills">
+        <div class="container">
+            <h2 class="section-title glitch" data-text="TECH ARSENAL">TECH ARSENAL</h2>
+            <div class="skills-container">
+                <div class="skill-category">
+                    <h3 class="category-title">Languages & Frameworks</h3>
+                    <div class="skill-grid">
+                        <div class="skill-item" data-skill="Python">
+                            <i class="fab fa-python"></i>
+                            <span>Python</span>
+                        </div>
+                        <div class="skill-item" data-skill="Java">
+                            <i class="fab fa-java"></i>
+                            <span>Java</span>
+                        </div>
+                        <div class="skill-item" data-skill="C++">
+                            <i class="fas fa-code"></i>
+                            <span>C++</span>
+                        </div>
+                        <div class="skill-item" data-skill="PHP">
+                            <i class="fab fa-php"></i>
+                            <span>PHP</span>
+                        </div>
+                        <div class="skill-item" data-skill="HTML5">
+                            <i class="fab fa-html5"></i>
+                            <span>HTML5</span>
+                        </div>
+                        <div class="skill-item" data-skill="CSS3">
+                            <i class="fab fa-css3-alt"></i>
+                            <span>CSS3</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="skill-category">
+                    <h3 class="category-title">Web Development</h3>
+                    <div class="skill-grid">
+                        <div class="skill-item" data-skill="React">
+                            <i class="fab fa-react"></i>
+                            <span>React</span>
+                        </div>
+                        <div class="skill-item" data-skill="Next.js">
+                            <i class="fas fa-arrow-right"></i>
+                            <span>Next.js</span>
+                        </div>
+                        <div class="skill-item" data-skill="Node.js">
+                            <i class="fab fa-node-js"></i>
+                            <span>Node.js</span>
+                        </div>
+                        <div class="skill-item" data-skill="Laravel">
+                            <i class="fab fa-laravel"></i>
+                            <span>Laravel</span>
+                        </div>
+                        <div class="skill-item" data-skill="Bootstrap">
+                            <i class="fab fa-bootstrap"></i>
+                            <span>Bootstrap</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="skill-category">
+                    <h3 class="category-title">AI & Game Development <span class="learning-badge">Learning</span></h3>
+                    <div class="skill-grid">
+                        <div class="skill-item learning" data-skill="TensorFlow">
+                            <i class="fas fa-brain"></i>
+                            <span>TensorFlow</span>
+                        </div>
+                        <div class="skill-item learning" data-skill="Unity">
+                            <i class="fab fa-unity"></i>
+                            <span>Unity</span>
+                        </div>
+                        <div class="skill-item learning" data-skill="Unreal Engine">
+                            <i class="fas fa-gamepad"></i>
+                            <span>Unreal Engine</span>
+                        </div>
+                        <div class="skill-item learning" data-skill="Blender">
+                            <i class="fas fa-cube"></i>
+                            <span>Blender</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects">
+        <div class="container">
+            <h2 class="section-title glitch" data-text="PROJECTS">PROJECTS</h2>
+            <div class="projects-grid">
+                <div class="project-card matrix-text">
+                    <div class="project-image">
+                        <img src="https://via.placeholder.com/400x250/1a1a2e/00d4ff?text=E-Sports+Platform" alt="CSE370 Project">
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="https://github.com/Jobayer-hasan-rifat/CSE370-Project" class="project-link" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3>E-Sports Gaming Platform</h3>
+                        <p>An E-sports gaming website where organiser create tournament and user can register for tournament</p>
+                        <div class="project-tech">
+                            <span>PHP</span>
+                            <span>MySQL</span>
+                            <span>JavaScript</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card matrix-text">
+                    <div class="project-image">
+                        <img src="https://via.placeholder.com/400x250/1a1a2e/00d4ff?text=Lost+%26+Found" alt="BRACU Lost Found">
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="https://test-seven-sigma-73.vercel.app" class="project-link" target="_blank" rel="noopener noreferrer"><i class="fas fa-external-link-alt"></i></a>
+                                <a href="https://github.com/Jobayer-hasan-rifat/Bracu-Lost-Found" class="project-link" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3>BRACU Lost & Found System</h3>
+                        <p>University lost and found management system for BRAC University students</p>
+                        <div class="project-tech">
+                            <span>JavaScript</span>
+                            <span>Node.js</span>
+                            <span>MongoDB</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card matrix-text">
+                    <div class="project-image">
+                        <img src="https://via.placeholder.com/400x250/1a1a2e/00d4ff?text=AI+VAE" alt="Variational Autoencoder">
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="https://github.com/Jobayer-hasan-rifat/Unsupervised-Learning-with-CNN-based-Variational-Autoencoders" class="project-link"><i class="fab fa-github"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3>CNN-based Variational Autoencoders</h3>
+                        <p>CNN-based Variational Autoencoder on MNIST with deterministic AE baseline, uncertainty analysis</p>
+                        <div class="project-tech">
+                            <span>Python</span>
+                            <span>TensorFlow</span>
+                            <span>CNN</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card matrix-text">
+                    <div class="project-image">
+                        <img src="https://via.placeholder.com/400x250/1a1a2e/00d4ff?text=Carrom+Game" alt="Carrom Board Game">
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="https://github.com/Jobayer-hasan-rifat/cse423-Project" class="project-link"><i class="fab fa-github"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3>Carrom Board Game</h3>
+                        <p>Interactive carrom board game using OpenGL and Midpoint Circle Algorithm</p>
+                        <div class="project-tech">
+                            <span>Python</span>
+                            <span>OpenGL</span>
+                            <span>Graphics</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card matrix-text">
+                    <div class="project-image">
+                        <img src="https://via.placeholder.com/400x250/1a1a2e/00d4ff?text=Hotel+System" alt="Hotel Booking">
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="https://github.com/Jobayer-hasan-rifat/hotel-booking-system" class="project-link"><i class="fab fa-github"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3>Hotel Booking System</h3>
+                        <p>Complete hotel management and booking system with user authentication</p>
+                        <div class="project-tech">
+                            <span>JavaScript</span>
+                            <span>Node.js</span>
+                            <span>Express</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card matrix-text">
+                    <div class="project-image">
+                        <img src="https://via.placeholder.com/400x250/1a1a2e/00d4ff?text=OCA+System" alt="University Management">
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="https://github.com/Jobayer-hasan-rifat/CSE471-Project" class="project-link"><i class="fab fa-github"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3>University OCA Management</h3>
+                        <p>Management system for University Office of Co-curricular Activity (OCA)</p>
+                        <div class="project-tech">
+                            <span>Laravel</span>
+                            <span>Blade</span>
+                            <span>PHP</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Achievements Section -->
+    <section id="achievements" class="achievements">
+        <div class="container">
+            <h2 class="section-title glitch" data-text="ACHIEVEMENTS">ACHIEVEMENTS</h2>
+            <div class="achievements-grid">
+                <div class="achievement-card matrix-text">
+                    <div class="achievement-icon">
+                        <i class="fas fa-award"></i>
+                    </div>
+                    <h3>Aspire Leadership Program</h3>
+                    <p>Successfully completed the Aspire Leadership Program, developing essential leadership and professional skills</p>
+                </div>
+                <div class="achievement-card matrix-text">
+                    <div class="achievement-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <h3>Computer Science Student</h3>
+                    <p>Final year Computer Science student at BRAC University with focus on AI and Software Development</p>
+                </div>
+                <div class="achievement-card matrix-text">
+                    <div class="achievement-icon">
+                        <i class="fas fa-code"></i>
+                    </div>
+                    <h3>Full-Stack Developer</h3>
+                    <p>Proficient in multiple programming languages and frameworks with hands-on project experience</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="section-title glitch" data-text="GET IN TOUCH">GET IN TOUCH</h2>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <h3>Let's Build Something Amazing Together!</h3>
+                    <p>I'm always open to discussing new opportunities, innovative projects, or just having a chat about technology.</p>
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <span>jobayer9948@gmail.com</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Dhaka, Bangladesh</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-graduation-cap"></i>
+                            <span>BRAC University</span>
+                        </div>
+                    </div>
+                    <div class="social-links">
+                        <a href="#" class="social-link"><i class="fab fa-github"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-linkedin"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div class="contact-form">
+                    <form>
+                        <div class="form-group">
+                            <input type="text" placeholder="Your Name" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" placeholder="Your Email" required>
+                        </div>
+                        <div class="form-group">
+                            <textarea placeholder="Your Message" rows="5" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 MD. Jobayer Hasan. All rights reserved.</p>
+            <p class="footer-quote">"Code. Create. Innovate. Repeat."</p>
+        </div>
+    </footer>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
