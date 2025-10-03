@@ -5,7 +5,7 @@
 
 <!-- Animated Typing Text - Slower Speed -->
 <h1 align="center">
-  <img src="https://readme-typing-svg.herokuapp.com/?font=Righteous&size=35&center=true&vCenter=true&width=700&height=70&duration=6000&pause=2000&lines=Hey!+I'm+MD.+Jobayer+Hasan;Final+Year+CS+Student+at+BRAC+University;Tech+Enthusiast+%26+Future+AI+Developer;Building+the+Future+with+Code!" />
+  <img src="https://readme-typing-svg.herokuapp.com/?font=JetBrains+Mono&size=35&center=true&vCenter=true&width=700&height=70&duration=6000&pause=2000&lines=Hey!+I'm+MD.+Jobayer+Hasan;Final+Year+CS+Student+at+BRAC+University;Tech+Enthusiast+%26+Future+AI+Developer;Building+the+Future+with+Code!" />
 </h1>
 
 <!-- Subtitle with slower animation -->
