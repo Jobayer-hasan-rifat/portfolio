@@ -1,0 +1,105 @@
+@import "tailwindcss";
+
+:root {
+  --bg: #070708;
+  --bg-soft: #0e0e10;
+  --fg: #f2efe9;
+  --muted: #8a8780;
+  --accent: #e8743b;
+  --accent-2: #f2b14c;
+  --accent-3: #3fb6c4;
+}
+
+@theme inline {
+  --font-display: var(--font-display);
+  --font-sans: var(--font-sans);
+  --color-bg: var(--bg);
+  --color-fg: var(--fg);
+  --color-accent: var(--accent);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: auto; /* Lenis handles smoothing */
+  background: var(--bg);
+}
+
+body {
+  background: var(--bg);
+  color: var(--fg);
+  font-family: var(--font-sans), system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+
+/* Hide scrollbar but keep scrollability */
+body::-webkit-scrollbar {
+  width: 0;
+  background: transparent;
+}
+body {
+  scrollbar-width: none;
+}
+
+::selection {
+  background: var(--accent);
+  color: #0a0a0a;
+}
+
+canvas {
+  outline: none;
+}
+
+.font-display {
+  font-family: var(--font-display), system-ui, sans-serif;
+  font-weight: 400;
+  letter-spacing: 0.01em;
+}
+
+/* Cinematic gradient text */
+.text-sunset {
+  background: linear-gradient(
+    100deg,
+    #ffd27a 0%,
+    var(--accent-2) 30%,
+    var(--accent) 65%,
+    #ff7aa6 100%
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  filter: drop-shadow(0 0 24px rgba(232, 116, 59, 0.35));
+}
+
+.text-stroke {
+  -webkit-text-stroke: 1px rgba(242, 239, 233, 0.35);
+  color: transparent;
+}
+
+/* Film grain + vignette overlays for the cinematic look */
+.grain::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: 60;
+  pointer-events: none;
+  opacity: 0.045;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' /%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' /%3E%3C/svg%3E");
+}
+
+.vignette {
+  position: fixed;
+  inset: 0;
+  z-index: 55;
+  pointer-events: none;
+  background: radial-gradient(
+    ellipse at center,
+    transparent 55%,
+    rgba(0, 0, 0, 0.55) 100%
+  );
+}
