@@ -102,11 +102,11 @@ export default function AvatarGuide() {
       (entries) => {
         // pick the entry with greatest intersection
         let best: IntersectionObserverEntry | null = null;
-        entries.forEach((e) => {
+        for (const e of entries) {
           if (!best || e.intersectionRatio > best.intersectionRatio) best = e;
-        });
+        }
         if (best && best.isIntersecting) {
-          const m = MARKERS.find((x) => x.id === (best as IntersectionObserverEntry).target.id);
+          const m = MARKERS.find((x) => x.id === best!.target.id);
           if (m) setActive(m);
         }
       },
