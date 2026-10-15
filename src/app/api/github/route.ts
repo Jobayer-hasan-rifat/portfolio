@@ -1,5 +1,5 @@
 import { NextResponse } from "next/server";
-import { fetchGitHubStats, fetchProcessedRepos } from "@/lib/github";
+import { fetchContributions, fetchGitHubStats, fetchProcessedRepos } from "@/lib/github";
 
 export const revalidate = 1800;
 
@@ -25,7 +25,19 @@ const FALLBACK_DATA = {
   repos: [],
 };
 
+// The calendar comes from a different GitHub endpoint, so a failure there
+// shouldn't take down the repo data (and vice versa).
+async function safeContributions() {
+  try {
+    return await fetchContributions();
+  } catch (error) {
+    console.error("[GitHub contributions]", error instanceof Error ? error.message : error);
+    return null;
+  }
+}
+
 export async function GET() {
+  const contributions = await safeContributions();
   try {
     const [stats, repos] = await Promise.all([
       fetchGitHubStats(),
@@ -33,7 +45,7 @@ export async function GET() {
     ]);
 
     return NextResponse.json(
-      { stats, repos },
+      { stats, repos, contributions },
       {
         headers: {
           "Cache-Control":
@@ -43,7 +55,7 @@ export async function GET() {
     );
   } catch (error) {
     console.error("[GitHub API]", error instanceof Error ? error.message : error);
-    return NextResponse.json(FALLBACK_DATA, {
+    return NextResponse.json({ ...FALLBACK_DATA, contributions }, {
       headers: {
         "Cache-Control": "public, s-maxage=60, stale-while-revalidate=120",
       },

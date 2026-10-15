@@ -4,7 +4,7 @@
   --bg: #070708;
   --bg-soft: #0e0e10;
   --fg: #f2efe9;
-  --muted: #8a8780;
+  --muted: #b5b1a9;
   --accent: #e8743b;
   --accent-2: #f2b14c;
   --accent-3: #3fb6c4;
@@ -16,12 +16,6 @@
   --color-bg: var(--bg);
   --color-fg: var(--fg);
   --color-accent: var(--accent);
-}
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
 }
 
 html {
@@ -81,6 +75,39 @@ canvas {
   color: transparent;
 }
 
+.text-stroke-strong {
+  -webkit-text-stroke: 1.5px rgba(242, 239, 233, 0.55);
+  color: transparent;
+}
+
+.text-shadow-strong {
+  text-shadow: 0 2px 16px rgba(0, 0, 0, 0.9);
+}
+
+/* Infinite marquee: track holds two identical halves */
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+.marquee-track {
+  animation: marquee linear infinite;
+}
+
+.marquee-reverse {
+  animation-direction: reverse;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .marquee-track {
+    animation: none;
+  }
+}
+
 /* Film grain + vignette overlays for the cinematic look */
 .grain::after {
   content: "";
@@ -102,4 +129,12 @@ canvas {
     transparent 55%,
     rgba(0, 0, 0, 0.55) 100%
   );
+}
+
+/* Die-cut sticker: thin white outline + soft drop, faded into the page at the bottom */
+.sticker {
+  filter: drop-shadow(2px 0 0 #fff) drop-shadow(-2px 0 0 #fff) drop-shadow(0 2px 0 #fff)
+    drop-shadow(0 -2px 0 #fff) drop-shadow(0 18px 30px rgba(0, 0, 0, 0.6));
+  -webkit-mask-image: linear-gradient(to bottom, #000 78%, transparent 100%);
+  mask-image: linear-gradient(to bottom, #000 78%, transparent 100%);
 }

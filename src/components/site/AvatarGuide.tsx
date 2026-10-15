@@ -20,7 +20,6 @@ const MARKERS: Marker[] = [
   { id: "skills", side: "right", tip: "The toolkit." },
   { id: "projects", side: "left", tip: "Real projects, live links." },
   { id: "research", side: "right", tip: "Where curiosity leads." },
-  { id: "achievements", side: "left", tip: "Milestones unlocked." },
   { id: "contact", side: "right", tip: "Say hi!" },
 ];
 

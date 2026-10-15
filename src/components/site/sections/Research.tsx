@@ -1,6 +1,7 @@
 "use client";
 
 import Reveal from "../Reveal";
+import SectionHeader from "../SectionHeader";
 
 const AREAS = [
   {
@@ -28,20 +29,19 @@ export default function Research() {
       className="relative min-h-screen flex items-center px-6 md:px-16 py-28"
     >
       <div className="max-w-5xl mx-auto w-full">
-        <Reveal>
-          <span className="text-[11px] uppercase tracking-[0.4em] text-[var(--accent)]">
-            04 — Research
-          </span>
-        </Reveal>
-        <Reveal delay={0.1}>
-          <h2 className="font-display text-[9vw] md:text-[5vw] leading-[0.95] mt-6 max-w-4xl">
-            Curiosity is the <span className="text-sunset">engine</span>.
-          </h2>
-        </Reveal>
+        <SectionHeader
+          index="04"
+          label="Research"
+          title={
+            <>
+              Curiosity is the <span className="text-sunset">engine</span>.
+            </>
+          }
+        />
 
         <div className="grid sm:grid-cols-2 gap-px mt-16 bg-white/8 rounded-2xl overflow-hidden">
           {AREAS.map((a, i) => (
-            <Reveal key={a.t} delay={0.06 * i} className="bg-[var(--bg)]">
+            <Reveal key={a.t} delay={0.06 * i} className="bg-black/70 backdrop-blur-md">
               <div className="p-8 h-full hover:bg-white/[0.03] transition-colors">
                 <div className="flex items-center gap-3 mb-3">
                   <span className="font-display text-2xl text-[var(--muted)]">

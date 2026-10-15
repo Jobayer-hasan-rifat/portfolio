@@ -16,7 +16,7 @@ const anton = Anton({
 });
 
 export const metadata: Metadata = {
-  title: "Jobayer Hasan — AI Engineer & Full-Stack Developer",
+  title: "Jobayer Hasan",
   description:
     "The portfolio of Jobayer Hasan. AI Engineer, Machine Learning enthusiast and full-stack developer — a cinematic journey through projects, research and skills.",
   keywords: [
@@ -28,7 +28,7 @@ export const metadata: Metadata = {
   ],
   authors: [{ name: "Jobayer Hasan" }],
   openGraph: {
-    title: "Jobayer Hasan — AI Engineer & Full-Stack Developer",
+    title: "Jobayer Hasan",
     description:
       "A cinematic journey through projects, research and skills.",
     type: "website",

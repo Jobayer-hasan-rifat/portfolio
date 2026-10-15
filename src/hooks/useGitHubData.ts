@@ -1,11 +1,12 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import type { GitHubStats, ProcessedRepo } from "@/types/github";
+import type { ContributionCalendar, GitHubStats, ProcessedRepo } from "@/types/github";
 
 interface GitHubData {
   stats: GitHubStats | null;
   repos: ProcessedRepo[];
+  contributions: ContributionCalendar | null;
   loading: boolean;
   error: string | null;
 }
@@ -14,6 +15,7 @@ export function useGitHubData(): GitHubData {
   const [data, setData] = useState<GitHubData>({
     stats: null,
     repos: [],
+    contributions: null,
     loading: true,
     error: null,
   });
@@ -30,6 +32,7 @@ export function useGitHubData(): GitHubData {
           setData({
             stats: json.stats,
             repos: json.repos,
+            contributions: json.contributions ?? null,
             loading: false,
             error: null,
           });

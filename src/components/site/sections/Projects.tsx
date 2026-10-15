@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import Reveal from "../Reveal";
+import SectionHeader from "../SectionHeader";
 import type { ProcessedRepo } from "@/types/github";
 
 const CATEGORY_COLOR: Record<string, string> = {
@@ -25,7 +26,7 @@ function ProjectCard({ repo, index }: { repo: ProcessedRepo; index: number }) {
       <motion.div
         whileHover={{ y: -6 }}
         transition={{ type: "spring", stiffness: 300, damping: 22 }}
-        className="group relative h-full rounded-2xl border border-white/10 bg-white/[0.025] backdrop-blur-sm overflow-hidden p-6 flex flex-col"
+        className="group relative h-full rounded-2xl border border-white/10 bg-black/55 backdrop-blur-md overflow-hidden p-6 flex flex-col"
       >
         {/* hover glow */}
         <div
@@ -113,25 +114,17 @@ export default function Projects({ repos }: { repos: ProcessedRepo[] }) {
       className="relative min-h-screen flex items-center px-6 md:px-16 py-28"
     >
       <div className="max-w-6xl mx-auto w-full">
-        <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-14">
-          <div>
-            <Reveal>
-              <span className="text-[11px] uppercase tracking-[0.4em] text-[var(--accent)]">
-                03 — Projects
-              </span>
-            </Reveal>
-            <Reveal delay={0.1}>
-              <h2 className="font-display text-[10vw] md:text-[5.5vw] leading-[0.95] mt-6">
+        <div className="mb-14">
+          <SectionHeader
+            index="03"
+            label="Projects"
+            title={
+              <>
                 Selected <span className="text-sunset">work</span>
-              </h2>
-            </Reveal>
-          </div>
-          <Reveal delay={0.15}>
-            <p className="text-sm text-[var(--muted)] max-w-xs">
-              Pulled straight from GitHub and sorted by impact. Every card opens
-              the real repository.
-            </p>
-          </Reveal>
+              </>
+            }
+            intro="Pulled from GitHub and sorted by stars. Every card opens the real repository."
+          />
         </div>
 
         {list.length === 0 ? (
@@ -151,7 +144,7 @@ export default function Projects({ repos }: { repos: ProcessedRepo[] }) {
             href="https://github.com/Jobayer-hasan-rifat?tab=repositories"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 mt-12 text-sm uppercase tracking-[0.25em] text-[var(--fg)] hover:text-sunset transition-colors"
+            className="flex justify-center items-center gap-2 mt-12 text-sm uppercase tracking-[0.25em] text-[var(--fg)] hover:text-sunset transition-colors"
           >
             All repositories
             <span className="text-[var(--accent)]">→</span>

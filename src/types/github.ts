@@ -74,3 +74,16 @@ export interface GitHubStats {
   contributionYears: number[];
   profile: GitHubProfile;
 }
+
+export interface ContributionDay {
+  date: string;
+  /** GitHub's 0–4 intensity bucket. */
+  level: number;
+  count: number;
+}
+
+export interface ContributionCalendar {
+  total: number;
+  /** Columns of up to seven days, Sunday first, oldest week first. */
+  weeks: (ContributionDay | null)[][];
+}

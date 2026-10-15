@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Reveal from "../Reveal";
+import SectionHeader from "../SectionHeader";
 import { SITE_CONFIG } from "@/lib/constants";
 
 export default function Contact() {
@@ -13,20 +14,19 @@ export default function Contact() {
       className="relative min-h-screen flex items-center px-6 md:px-16 py-28"
     >
       <div className="max-w-5xl mx-auto w-full">
-        <Reveal>
-          <span className="text-[11px] uppercase tracking-[0.4em] text-[var(--accent)]">
-            06 — Contact
-          </span>
-        </Reveal>
-        <Reveal delay={0.1}>
-          <h2 className="font-display text-[12vw] md:text-[7vw] leading-[0.9] mt-6">
-            Let&apos;s build <span className="text-sunset">something</span>.
-          </h2>
-        </Reveal>
+        <SectionHeader
+          index="06"
+          label="Contact"
+          title={
+            <>
+              Let&apos;s build <span className="text-sunset">something</span>.
+            </>
+          }
+        />
 
         <div className="grid md:grid-cols-[1fr_1.1fr] gap-14 mt-16">
           <Reveal delay={0.15}>
-            <div className="flex flex-col gap-4">
+            <div className="flex flex-col gap-4 rounded-2xl border border-white/10 bg-black/50 backdrop-blur-md p-6">
               <a
                 href={`mailto:${SITE_CONFIG.email}`}
                 className="group flex items-center justify-between border-b border-white/10 pb-4"

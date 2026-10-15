@@ -10,7 +10,6 @@ import About from "@/components/site/sections/About";
 import Skills from "@/components/site/sections/Skills";
 import Projects from "@/components/site/sections/Projects";
 import Research from "@/components/site/sections/Research";
-import Achievements from "@/components/site/sections/Achievements";
 import Contact from "@/components/site/sections/Contact";
 
 const SceneBackground = dynamic(
@@ -19,7 +18,7 @@ const SceneBackground = dynamic(
 );
 
 export default function SiteClient() {
-  const { stats, repos } = useGitHubData();
+  const { stats, repos, contributions } = useGitHubData();
 
   return (
     <SmoothScroll>
@@ -33,11 +32,10 @@ export default function SiteClient() {
       {/* Scrolling content sits above the canvas */}
       <main className="relative z-10">
         <Hero />
-        <About stats={stats} />
-        <Skills stats={stats} />
+        <About stats={stats} contributions={contributions} />
+        <Skills />
         <Projects repos={repos} />
         <Research />
-        <Achievements stats={stats} />
         <Contact />
       </main>
     </SmoothScroll>

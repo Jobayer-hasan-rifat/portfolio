@@ -1,4 +1,6 @@
 import {
+  ContributionCalendar,
+  ContributionDay,
   GitHubRepo,
   GitHubLanguages,
   GitHubProfile,
@@ -198,4 +200,38 @@ export async function fetchGitHubStats(): Promise<GitHubStats> {
     contributionYears: Array.from(years).sort(),
     profile,
   };
+}
+
+/**
+ * Contribution calendar scraped from GitHub's public contributions page
+ * (the same HTML the profile graph uses), so it works without a token.
+ */
+export async function fetchContributions(): Promise<ContributionCalendar> {
+  const res = await fetch(
+    `https://github.com/users/${GITHUB_USERNAME}/contributions`,
+    { next: { revalidate: 3600 } }
+  );
+  if (!res.ok) throw new Error(`GitHub contributions error: ${res.status}`);
+  const html = await res.text();
+
+  const counts = new Map<string, number>();
+  for (const m of html.matchAll(/<tool-tip[^>]*for="([^"]+)"[^>]*>([^<]*)<\/tool-tip>/g)) {
+    const n = /^(\d+) contribution/.exec(m[2]);
+    counts.set(m[1], n ? parseInt(n[1], 10) : 0);
+  }
+
+  const weeks: (ContributionDay | null)[][] = [];
+  let total = 0;
+  for (const m of html.matchAll(/<td[^>]*data-date="([\d-]+)"[^>]*id="contribution-day-component-(\d+)-(\d+)"[^>]*data-level="(\d)"/g)) {
+    const [, date, weekday, week, level] = m;
+    const w = parseInt(week, 10);
+    const d = parseInt(weekday, 10);
+    const count = counts.get(`contribution-day-component-${weekday}-${week}`) ?? 0;
+    weeks[w] ??= Array(7).fill(null);
+    weeks[w][d] = { date, level: parseInt(level, 10), count };
+    total += count;
+  }
+
+  if (weeks.length === 0) throw new Error("GitHub contributions: no cells parsed");
+  return { total, weeks: Array.from(weeks, (w) => w ?? Array(7).fill(null)) };
 }

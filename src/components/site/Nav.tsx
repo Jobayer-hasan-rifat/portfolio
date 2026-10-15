@@ -9,7 +9,6 @@ const SECTIONS = [
   { id: "skills", label: "Skills" },
   { id: "projects", label: "Projects" },
   { id: "research", label: "Research" },
-  { id: "achievements", label: "Awards" },
   { id: "contact", label: "Contact" },
 ];
 
@@ -70,14 +69,6 @@ export default function Nav() {
         <span className="font-display text-xl tracking-wide text-[var(--fg)]">
           JOBAYER<span className="text-sunset">.</span>
         </span>
-      </button>
-
-      {/* Contact shortcut */}
-      <button
-        onClick={() => go("contact")}
-        className="fixed top-6 right-6 md:right-10 z-50 text-[11px] uppercase tracking-[0.25em] text-[var(--muted)] hover:text-[var(--fg)] transition-colors"
-      >
-        Get in touch
       </button>
 
       {/* Side dots */}
